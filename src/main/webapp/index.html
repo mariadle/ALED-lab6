@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Inicio</title>
+		<link rel="stylesheet" href="estilos.css">
 		<meta charset="UTF-8">
 	</head>	
 	<body>
@@ -19,6 +20,7 @@
     <a href="baja.html">Baja</a>
     <a href="consulta.html">Consulta</a>
 	</nav>
+	<section>
 	<h1>Inicio</h1>
 	<table>
             <tr>
@@ -30,10 +32,15 @@
                 </td>
                 <td>
                 	<aside>
-                	<img src= "imagen1.png">
+                	<img src= "imagen1.png"
+                	onmouseout="this.src='imagen1.png'"
+    			    onmouseover="this.src='imagen2.png'"
+     			    onclick="this.src='imagen3.png'"
+    			    >
                 	</aside>
                 </td>
     </table>
+    </section>
     <footer>
     	<a href= "nombreAlumno.html"> María De La Escalera</a> 
     	Enviar email a: 

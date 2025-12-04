@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alta</title>
+<link rel= "stylesheet" href="estilos.css">
+</head>
+<body>
+	<header>
+        <table>
+            <tr>
+                <td><img src="logo.png"></td>
+                <td><h1>Gestión Hospitalaria</h1></td>
+            </tr>
+        </table>
+    </header>
+ 	<nav>
+    <a href="index.html">Inicio</a>
+    <a href="alta.html">Alta</a>
+    <a href="baja.html">Baja</a>
+    <a href="consulta.html">Consulta</a>
+	</nav>
+	<section>
+		<h2>Alta</h2>
+		<form name="formulario" action="alta" method="POST" onsubmit="return validar()" >
+			<label for="fname">Nombre</label><br>
+			<input type="text" id="fname" name="fname"><br>
+			
+			<label for="lname">Apellidos</label><br>
+			<input type="text" id="lname" name="lname"><br>
+			
+			<label for="dni">DNI</label><br>
+			<input type="text" id="dni" name="dni"><br>
+			
+			<input type="submit" value="Enviar">
+		</form>
+	</section>
+	<nav>
+	<footer>
+    	<a href= "nombreAlumno.html"> María De La Escalera</a> 
+    	Enviar email a: 
+    	 <a href= "correo.html"> maria.delaescalera@alumnos.upm.es</a>
+    </footer>
+	</nav>
+
+</body>
+<script>
+function validar() {
+	var numero, letra, letras, formato;
+	letras = 'TRWAGMYFPDXBNJZSQVHLCKET';
+	formato = /^\d{8}[a-zA-Z]$/;
+	dni = document.forms["formulario"]["dni"].value;
+	if(formato.test(dni)){
+	numero = dni.substr(0, dni.length-1);
+	letra = dni.substr(dni.length-1, 1);
+	numero = numero % 23;
+	letras=letras.substring(numero, numero+1);
+	if (letras!=letra) {
+	alert("Letra errónea");
+	return false;
+	}
+	else
+	return true;
+	}
+	else{
+	alert("Formato erróneo");
+	return false;
+	}
+	}
+
+</script>
+</html>
