@@ -61,5 +61,10 @@ header{
 	background-image: url(https://t4.ftcdn.net/jpg/03/08/02/89/360_F_308028924_YwjqVGzauey7GfmckScMtIkSPJAVNkll.jpg);
 	background-size: cover;
 	background-position: center;
-	font-family: Georgia serif;
+	font-family: Georgia, serif;
+}
+section label,
+section select{
+	font-family: Arial;
+	font-size:16px;
 }
