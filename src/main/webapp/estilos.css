@@ -68,3 +68,9 @@ section select{
 	font-family: Arial;
 	font-size:16px;
 }
+section input[type="submit"]{
+	padding: 4px 10px;
+	font-size: 14px;
+	width: auto;
+	border-radius: 4px;
+}
